@@ -46,8 +46,39 @@
                         <div class="nav-sub-headings">Shelves</div>
                         <ul class="nav-li nav3-list">
                             <li><svg class="nav-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>bookshelf</title><path d="M9 3V18H12V3H9M12 5L16 18L19 17L15 4L12 5M5 5V18H8V5H5M3 19V21H21V19H3Z" /></svg> Your Shelves</li>
-                            <li>Discover</li>
                         </ul>
+                        <button class="add-new-btn">New Book</button>
+                        <dialog>
+                            <div class="dialog-view">
+                                <div class="main-container-form">
+                                    <div class="header-container-form">
+                                        <div class="header-form">Add a New Book </div>
+                                        <svg class="close-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>window-close</title><path d="M13.46,12L19,17.54V19H17.54L12,13.46L6.46,19H5V17.54L10.54,12L5,6.46V5H6.46L12,10.54L17.54,5H19V6.46L13.46,12Z" /></svg>
+                                    </div>
+                                    <form action=""class="form-main">
+                                        <div class="form-container">
+                                            <div class="title-container-form input-container-form">
+                                                <label for="title" class="input-label-form">Title</label>
+                                                <input type="text" id="title" name="title" class="input-field-form input-field-text-form">
+                                            </div>
+                                            <div class="author-container-form input-container-form">
+                                                <label for="author" class="input-label-form">Author</label>
+                                                <input type="text" id="author" name="author" class="input-field-form input-field-text-form">
+                                            </div>
+                                            <div class="rating-container-form input-container-form">
+                                                <label for="rating" class="input-label-form">Rating</label>
+                                                <input type="text" id="rating" name="rating" class="input-field-form input-field-text-form">
+                                            </div>
+                                            <div class="image-container-form input-container-form">
+                                                <label for="image" class="input-label-form">Image</label>
+                                                <input type="file" id="image" name="image" class="input-field-form image-field-form">
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="submit-btn-form">Add</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </dialog>
                     </div>
                 </div>
             </nav>
@@ -154,6 +185,7 @@
             </aside>
         </main>
     </div>
+    
     <script src="script.js"></script>
 </body>
 </html>

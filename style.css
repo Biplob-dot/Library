@@ -18,6 +18,9 @@ svg, img{
 .main-library-logo{
     font-family: 'Great Vibes', cursive;
     font-size: 2.25rem;
+    color: #2fb878;
+    letter-spacing: 2%;
+    font-weight: 600;
 }
 
 .nav-svg{
@@ -38,7 +41,7 @@ ul{
 header{
     height: 5rem;
     display: grid;
-    grid-template-columns: 1fr 1fr 6fr 1fr 1fr 1fr;
+    grid-template-columns: 1.5fr 0.5fr 6fr 1fr 1fr 1fr;
     align-items: center;
     justify-items: center;
     box-shadow: 0em 0em 0.5em 0em #999;
@@ -68,7 +71,7 @@ header{
 }
 
 main{
-    background-color: #F5F5F5;
+    background-color: #f6f6f6;
     height: auto;
     flex: 1;
     display: grid;
@@ -115,6 +118,22 @@ li, .nav-sub-headings{
 
 li:hover{
     background-color: #E2E9F0;
+}
+
+.add-new-btn{
+    height: 2.5rem;
+    width: 60%;
+    margin-left: 3rem;
+    font-size: 1rem;
+    background-color: #2fb878;
+    border: none;
+    text-decoration: none;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+.add-new-btn:hover{
+    box-shadow: 0.25em 0.25em 0.25em #cdcdcd;
 }
 
 .main-content-container{
@@ -205,4 +224,157 @@ img{
     color: #909090;
 }
 
+/* dialog css */
 
+
+.close-btn{
+    width: 3rem;   
+    height: 3rem;
+    fill: currentColor; 
+    align-self: center;
+}
+
+.close-btn:hover{
+    cursor: pointer;
+}
+
+dialog{
+    border: none;
+    justify-self: center;
+    align-self: center;
+    height: 33rem;
+    width: 35rem;
+    border-radius: 1rem;
+}
+
+.dialog-view{
+    border: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    border-radius: 1rem;
+}
+
+.main-container-form{
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0em 0em 1em #999;
+}
+
+.header-container-form{
+    font-weight: 600;
+    height: 5rem;
+    display: flex;
+    justify-items: center;
+    background-color: rgb(56, 56, 56);
+    color: white;
+    font-size: 2rem;
+    justify-content: space-between;
+    padding: 1.75rem;
+}
+
+.header-form{
+    align-self: center;
+}
+
+.form-main{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-container{
+    height: 23rem;
+    display: grid;
+    padding: 0rem 1.5rem 1.25rem 1.25rem;
+    font-size: 1.5rem;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0rem 1.5rem;
+    /* align-items: center; */
+}
+
+.input-container-form{
+    display: grid;
+    align-content: space-evenly;
+}
+
+.title-container-form{
+    grid-column: 1/5;
+}
+
+.author-container-form , .rating-container-form{
+    grid-column: 1/3;
+}
+
+.image-container-form{
+    grid-row: 2/4;
+    grid-column: 3/5;
+}
+
+.input-label-form{
+    font-weight: 500;
+}
+
+.input-field-form{
+    border: none;
+    border-radius: 0.25rem;
+    height: 2.25rem;
+    background-color: #E2E9F0;
+}
+
+.input-field-text-form{
+    padding: 0.25rem 0.5rem;
+    font-size: 1rem;
+}
+
+.image-field-form::file-selector-button{
+    border: none;
+    border-radius: 0.25rem;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+
+.image-field-form::file-selector-button:hover{
+    opacity: 25%;
+    cursor: pointer;
+}
+
+.image-field-form{
+    height: 10rem;
+    text-decoration: none;
+    border: none;
+}
+
+.submit-btn-form{
+    width: 90%;
+    margin-bottom: 1rem;
+    align-self: center;
+    height: 2.5rem;
+    font-size: 1rem;
+    font-size: 1rem;
+    background-color: #2fb878;
+    border: none;
+    text-decoration: none;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+.submit-btn-form:hover{
+    box-shadow: 0.25em 0.25em 0.25em #cdcdcd;
+    cursor: pointer;
+}
+
+::backdrop{
+    background-color: rgb(0, 0, 0);
+    opacity: 45%;
+}
+
+/* dialog css end */

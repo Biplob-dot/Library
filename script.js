@@ -1,34 +1,18 @@
-// const myLibrary = [];
+//dialog
 
-// function Book(author, title, pages, readStatus) {
-//     if (!new.target) {
-//         throw Error("You must use the 'new' operator to call the constructor");
-//     }
-//     let uniqueID = self.crypto.randomUUID();
-//     this.id = uniqueID;
-//     this.author = author;
-//     this.title = title;
-//     this.pages = pages;
-//     this.readStatus = readStatus;
-//     this.info = function(){
-//         console.log(`${this.title} by ${this.author} with ${this.pages},${this.readStatus}`);
-//     }
-// }
+const dialog = document.querySelector("dialog");
+const showButton = document.querySelector(".add-new-btn");
+const closeButton = document.querySelector(".close-btn");
 
-// const theHobbit = new Book('J.R.R. Tolkien','The Hobbit','295 pages', 'not read yet');
-// myLibrary.push(theHobbit);
+showButton.addEventListener("click", () => {
+  dialog.showModal();
+});
 
-// const perilAtTheEndHouse = new Book('Agatha Christie','Peril at the end House','300 pages', 'read');
-// myLibrary.push(perilAtTheEndHouse);
+closeButton.addEventListener("click", () => {
+  dialog.close();
+});
 
-// const aBoyInTheStrippedPajamas = new Book('John Boyne','A boy in the Stripped Pajamas','224 pages', 'read');
-// myLibrary.push(aBoyInTheStrippedPajamas);
 
-// myLibrary.forEach(function(element, index){
-//     let book = document.createElement("li");
-//     book.innerText = element.title;
-//     libraryList.appendChild(book);
-// })
 
 const libraryContainer = document.querySelector(".library-container"); 
 let imgAddress = "Images/night.jpg";
@@ -42,6 +26,7 @@ class Book{
         this.rating = rating;
     }
 }
+
 
 const night = new Book("Night", "Ellie Weisel", "4.3");
 
