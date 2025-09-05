@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Grid Click Example</title>
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 80px);
+        gap: 10px;
+      }
+      .cell {
+        width: 80px;
+        height: 80px;
+        background-color: lightblue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 8px;
+      }
+      .cell:hover {
+        background-color: deepskyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid" id="grid"></div>
+
+    <script>
+      const grid = document.getElementById("grid");
+      const numCells = 12;
+
+      // Create grid cells
+      for (let i = 0; i < numCells; i++) {
+        const cell = document.createElement("div");
+        cell.classList.add("cell");
+        cell.textContent = i; // show index
+        grid.appendChild(cell);
+      }
+
+      // Event delegation
+      grid.addEventListener("click", (e) => {
+        if (e.target.classList.contains("cell")) {
+          // Convert HTMLCollection to array
+          const index = Array.from(grid.children).indexOf(e.target);
+          console.log("Clicked cell index:", index);
+          alert("You clicked cell index: " + index);
+        }
+      });
+    </script>
+  </body>
+</html>
